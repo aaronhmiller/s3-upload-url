@@ -1,11 +1,11 @@
 # s3-upload-url
 API Gateway + Lambda + S3 so you can securely have anyone upload a file to you
 
-To setup:
+### To setup:
 
 1. create a new Lambda (Node JS 16)
 
-2. paste the app.js code here into it
+2. paste the `app.js` code into it
 
 3. create an S3 bucket
 
@@ -29,12 +29,12 @@ To setup:
 
 6. create a Trigger of an AWS API Gateway
 
-To use:
+### To use:
 
 1. Load the API Gateway endpoint trigger
 2. Take the "uploadURL" and use it to upload a file to S3
 
-Example:
+### Example:
 
 Get upload URL:
 

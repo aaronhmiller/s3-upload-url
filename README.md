@@ -18,7 +18,7 @@ API Gateway + Lambda + S3 so you can securely have anyone upload a file to you
        "Version": "2012-10-17",
        "Statement": [
            {
-               "Sid": "lambda-s3",
+               "Sid": "LambdaToS3",
                "Effect": "Allow",
                "Action": "s3:PutObject",
                "Resource": "arn:aws:s3:::<YOUR_BUCKET_NAME>/*"

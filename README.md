@@ -26,22 +26,27 @@ API Gateway + Lambda + S3 so you can securely have anyone upload a file to you
        ]
    }
    ```
+6. create a `Function URL` to run the Lambda
 
-6. create a Trigger of an AWS API Gateway
+7. alternately, create a Trigger of an AWS API Gateway
 
 ### To use:
 
-1. Load the API Gateway endpoint trigger
+1. Load the Function URL (or API Gateway endpoint trigger)
 2. Take the "uploadURL" and use it to upload a file to S3
 
 ### Example:
 
 Get upload URL:
 
-`curl <gateway trigger>`
+`curl <function url> | jq .uploadURL`
 
 Upload the file:
 
 `curl --upload-file <file> <uploadURL>`
+
+or
+
+`http put <uploadURL> @file`
 
 Check S3 for the file (it'll be uniquely named each time).
